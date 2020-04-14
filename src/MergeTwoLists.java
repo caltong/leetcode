@@ -1,5 +1,3 @@
-import java.util.List;
-
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -33,10 +31,10 @@ class Solution21 {
 }
 
 class ListNode {
-    int val;
+    Integer val;
     ListNode next;
 
-    ListNode(int x) {
+    ListNode(Integer x) {
         val = x;
     }
 }
