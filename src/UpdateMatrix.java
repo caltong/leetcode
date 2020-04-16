@@ -7,7 +7,7 @@ class Solution542 {
         int row = matrix.length;
         int col = matrix[0].length;
         int[][] vector = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-        Queue<int[]> queue = new LinkedList<int[]>();
+        Queue<int[]> queue = new LinkedList<>();
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 if (matrix[i][j] != 0) {
@@ -40,11 +40,11 @@ public class UpdateMatrix {
     public static void main(String[] args) {
         Solution542 solution542 = new Solution542();
         int[][] result = solution542.updateMatrix(new int[][]{{0, 0, 0}, {0, 1, 0}, {1, 1, 1}});
-        for (int i = 0; i < result.length; i++) {
-            for (int j = 0; j < result[i].length; j++) {
-                System.out.print(result[i][j] + " ");
+        for (int[] ints : result) {
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }
