@@ -1,3 +1,5 @@
+import utils.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -30,14 +32,6 @@ class Solution21 {
     }
 }
 
-class ListNode {
-    Integer val;
-    ListNode next;
-
-    ListNode(Integer x) {
-        val = x;
-    }
-}
 
 public class MergeTwoLists {
     private ListNode generateListNode(int[] ints) {
