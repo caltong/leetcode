@@ -1,3 +1,5 @@
+import utils.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -14,10 +16,10 @@ class Solution83 {
         ListNode dummyHead = head;
         ListNode target = head;
         while (head.next != null) {
-            while (head.val == target.val && target.next != null) {
+            while (head.val.equals(target.val) && target.next != null) {
                 target = target.next;
             }
-            if (head.val == target.val) {
+            if (head.val.equals(target.val)) {
                 head.next = null;
             } else {
                 head.next = target;

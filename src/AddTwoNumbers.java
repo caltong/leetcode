@@ -1,3 +1,4 @@
+import utils.ListNode;
 
 /**
  * Definition for singly-linked list.
@@ -21,7 +22,7 @@ class Solution2 {
                 tmp += l2.val;
                 l2 = l2.next;
             }
-            int add = 0;
+            int add;
             add = tmp / 10;
             result.val = tmp % 10;
             if (add != 0) {
