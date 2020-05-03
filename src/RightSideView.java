@@ -1,12 +1,14 @@
+import utils.TreeNode;
+
 import java.util.*;
 
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class utils.TreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * utils.TreeNode left;
+ * utils.TreeNode right;
+ * utils.TreeNode(int x) { val = x; }
  * }
  */
 class Solution199 {

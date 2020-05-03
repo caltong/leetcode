@@ -1,14 +1,14 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import utils.TreeNode;
+
 import java.util.Arrays;
 
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class utils.TreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * utils.TreeNode left;
+ * utils.TreeNode right;
+ * utils.TreeNode(int x) { val = x; }
  * }
  */
 class Solution108 {

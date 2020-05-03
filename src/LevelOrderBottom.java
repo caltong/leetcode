@@ -1,3 +1,5 @@
+import utils.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -5,11 +7,11 @@ import java.util.Queue;
 
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class utils.TreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * utils.TreeNode left;
+ * utils.TreeNode right;
+ * utils.TreeNode(int x) { val = x; }
  * }
  */
 class Solution107 {
@@ -25,6 +27,7 @@ class Solution107 {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode oneNode = queue.poll();
+                assert oneNode != null;
                 oneLevel.add(oneNode.val);
                 if (oneNode.left != null) {
                     queue.add(oneNode.left);
