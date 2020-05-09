@@ -1,16 +1,18 @@
 class Solution69 {
     public int mySqrt(int x) {
-        long left = 0;
-        long right = x;
-        while (left < right) {
-            long mid = (right + left + 1) / 2;
-            if (mid * mid > x) {
-                right = mid - 1;
-            } else {
-                left = mid;
-            }
+        if (x == 0) {
+            return 0;
         }
-        return (int) left;
+        double C = x;
+        double x0 = x;
+        while (true) {
+            double xi = 0.5 * (x0 + C / x0);
+            if (Math.abs(x0 - xi) < 1e-7) {
+                break;
+            }
+            x0 = xi;
+        }
+        return (int) x0;
     }
 }
 
