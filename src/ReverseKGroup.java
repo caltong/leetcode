@@ -8,7 +8,7 @@ import utils.ListNode;
  * ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class Solution25 {
     public ListNode reverseKGroup(ListNode head, int k) {
         ListNode dummy = new ListNode(0);
         ListNode prev = dummy;
