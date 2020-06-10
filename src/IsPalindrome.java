@@ -16,6 +16,6 @@ class Solution9 {
 public class IsPalindrome {
     public static void main(String[] args) {
         Solution9 solution = new Solution9();
-        System.out.println(solution.isPalindrome(12345432));
+        System.out.println(solution.isPalindrome(123454321));
     }
 }
