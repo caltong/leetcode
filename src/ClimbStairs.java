@@ -19,6 +19,6 @@ class Solution70 {
 public class ClimbStairs {
     public static void main(String[] args) {
         Solution70 sol = new Solution70();
-        System.out.println(sol.climbStairs(4));
+        System.out.println(sol.climbStairs(5));
     }
 }
