@@ -13,19 +13,17 @@ import java.util.Arrays;
  */
 class Solution108 {
     public TreeNode sortedArrayToBST(int[] nums) {
-        if (nums.length == 0) {
+        return helper(nums, 0, nums.length - 1);
+    }
+
+    private TreeNode helper(int[] nums, int left, int right) {
+        if (left > right) {
             return null;
         }
-        int len = nums.length;
-        int mid = len / 2;
-        int midVal = nums[mid];
-        TreeNode root = new TreeNode(midVal);
-        if (mid > 0) {
-            root.left = sortedArrayToBST(Arrays.copyOfRange(nums, 0, mid));
-        }
-        if (mid < len - 1) {
-            root.right = sortedArrayToBST(Arrays.copyOfRange(nums, mid + 1, len));
-        }
+        int mid = (left + right) / 2;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = helper(nums, left, mid - 1);
+        root.right = helper(nums, mid + 1, right);
         return root;
     }
 }
