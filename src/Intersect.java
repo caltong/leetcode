@@ -34,7 +34,7 @@ class Solution350 {
 public class Intersect {
     public static void main(String[] args) {
         Solution350 solution350 = new Solution350();
-        int[] res = solution350.intersect(new int[]{1, 2, 2, 1}, new int[]{2, 2});
+        int[] res = solution350.intersect(new int[]{1, 2, 2, 1, 1}, new int[]{2, 2});
         System.out.println(Arrays.toString(res));
     }
 }
