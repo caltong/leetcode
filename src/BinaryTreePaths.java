@@ -1,7 +1,9 @@
+import utils.Tree;
 import utils.TreeNode;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -54,4 +56,11 @@ class Solution257 {
 }
 
 public class BinaryTreePaths {
+    public static void main(String[] args) {
+        Tree tree = new Tree();
+        TreeNode root = tree.buildTreeFromList(Arrays.asList(8, 5, 10, 1, 7, null, 12));
+        Solution257 solution257 = new Solution257();
+        List<String> res = solution257.binaryTreePaths(root);
+        System.out.println(res);
+    }
 }
