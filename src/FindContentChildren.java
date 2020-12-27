@@ -1,5 +1,3 @@
-import sun.java2d.pipe.SolidTextRenderer;
-
 import java.util.Arrays;
 
 class Solution455 {
