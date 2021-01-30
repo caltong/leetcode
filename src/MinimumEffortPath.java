@@ -1,12 +1,12 @@
+import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.List;
 
 class Solution1631 {
     public int minimumEffortPath(int[][] heights) {
         int row = heights.length;
         int col = heights[0].length;
-        List<int[]> edges = new LinkedList<>();
+        List<int[]> edges = new ArrayList<>();
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 int id = i * col + j;
