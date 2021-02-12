@@ -1,8 +1,8 @@
 import java.util.Stack;
 
 class Solution20 {
-    boolean isValid(String s) {
-        Stack<Character> st = new Stack<Character>();
+    public boolean isValid(String s) {
+        Stack<Character> st = new Stack<>();
         char[] chars = s.toCharArray();
         for (char aChar : chars) {
             if (st.size() == 0) {
