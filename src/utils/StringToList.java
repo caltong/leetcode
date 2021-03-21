@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 将力扣复制过来的字符串数组转化成数组对象
  */
 public class StringToList {
-    static int[] oneD(String s) {
+    public static int[] oneD(String s) {
         //去掉首尾中括号
         String substring = s.substring(1, s.length() - 1);
         String[] split = substring.split(",");
@@ -17,7 +17,7 @@ public class StringToList {
         return res;
     }
 
-    static int[][] twoD(String s) {
+    public static int[][] twoD(String s) {
         int col = 0;
         int i = 0;
         //获取列数
