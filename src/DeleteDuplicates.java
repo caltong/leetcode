@@ -1,4 +1,7 @@
 import utils.ListNode;
+import utils.ListNodeHelper;
+
+import java.util.Arrays;
 
 /**
  * Definition for singly-linked list.
@@ -13,47 +16,29 @@ class Solution83 {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode dummyHead = head;
-        ListNode target = head;
-        while (head.next != null) {
-            while (head.val.equals(target.val) && target.next != null) {
-                target = target.next;
+        ListNode p1 = head;
+        ListNode p2 = head.next;
+        while (p2 != null) {
+            while (p2 != null && p1.val == p2.val) {
+                p2 = p2.next;
+                p1.next = p2;
             }
-            if (head.val.equals(target.val)) {
-                head.next = null;
+            if (p2 == null) {
+                break;
             } else {
-                head.next = target;
-                head = head.next;
+                p1 = p1.next;
+                p2 = p2.next;
             }
         }
-        return dummyHead;
+        return head;
     }
 }
 
 public class DeleteDuplicates {
-    private ListNode generateListNode(int[] ints) {
-        ListNode aListNode = new ListNode(0);
-        ListNode head = aListNode;
-        for (int val : ints) {
-            aListNode.next = new ListNode(val);
-            aListNode = aListNode.next;
-        }
-        return head.next;
-    }
-
-    private void printListNode(ListNode aListNode) {
-        while (aListNode != null) {
-            System.out.print(aListNode.val + "-->");
-            aListNode = aListNode.next;
-        }
-        System.out.println();
-    }
-
     public static void main(String[] args) {
-        DeleteDuplicates link = new DeleteDuplicates();
-        ListNode l1 = link.generateListNode(new int[]{1, 1, 1, 2, 2, 3, 3, 3, 3, 3});
+        ListNode l1 = ListNodeHelper.listToListNode(new int[]{1, 1, 1, 2, 2, 3, 3, 3, 3, 3});
         Solution83 sol = new Solution83();
         ListNode result = sol.deleteDuplicates(l1);
-        link.printListNode(result);
+        System.out.println(Arrays.toString(ListNodeHelper.listNodeToList(result)));
     }
 }
