@@ -1,11 +1,10 @@
-package binarytree;
+package tree;
 
 import utils.Tree;
 import utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
