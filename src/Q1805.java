@@ -25,7 +25,7 @@ public class Q1805 {
         return integers.size();
     }
 
-    private String dropStartZero(String originString){
+    private String dropStartZero(String originString) {
         int actuallyStart = 0;
         for (int j = 0; j < originString.length(); j++) {
             if (originString.charAt(j) == '0') {
