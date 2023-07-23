@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 class Solution42 {
     public int trap(int[] height) {
         if (height.length == 0) {
