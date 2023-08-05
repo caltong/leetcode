@@ -9,31 +9,31 @@ import utils.ListNode;
  * }
  */
 class Solution21 {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode result = new ListNode(0);
         ListNode head = result;
-        while (l1 != null && l2 != null) {
-            if (l1.val < l2.val) {
-                result.next = l1;
+        while (list1 != null && list2 != null) {
+            if (list1.val < list2.val) {
+                result.next = list1;
                 result = result.next;
-                l1 = l1.next;
+                list1 = list1.next;
             } else {
-                result.next = l2;
+                result.next = list2;
                 result = result.next;
-                l2 = l2.next;
+                list2 = list2.next;
             }
         }
-        if (l1 != null) {
-            result.next = l1;
+        if (list1 != null) {
+            result.next = list1;
         } else {
-            result.next = l2;
+            result.next = list2;
         }
         return head.next;
     }
 }
 
 
-public class MergeTwoLists {
+public class MergeTwoSortedLists {
     private ListNode generateListNode(int[] ints) {
         ListNode aListNode = new ListNode(0);
         ListNode head = aListNode;
@@ -53,7 +53,7 @@ public class MergeTwoLists {
     }
 
     public static void main(String[] args) {
-        MergeTwoLists link = new MergeTwoLists();
+        MergeTwoSortedLists link = new MergeTwoSortedLists();
         ListNode l1 = link.generateListNode(new int[]{1, 2, 3});
         ListNode l2 = link.generateListNode(new int[]{1, 3, 4});
         Solution21 sol = new Solution21();
