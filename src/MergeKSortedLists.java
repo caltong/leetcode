@@ -49,5 +49,5 @@ class Solution23 {
 }
 
 
-public class MergeKLists {
+public class MergeKSortedLists {
 }
